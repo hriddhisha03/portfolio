@@ -24,6 +24,10 @@ const Landing:React.FC<LandingProps> = () => {
     if (about) {
         console.log("about button clicked");
     }
+    const [contact, setContact] = useState(false);
+    if (contact) {
+        console.log("contact button clicked");
+    }
     
 
     
@@ -44,15 +48,22 @@ const Landing:React.FC<LandingProps> = () => {
 </div>
 {/*about, contact, certificates button*/}
 <div className={`flex flex-col w-1/2 h-full items-center `}>
-    <div className={`flex w-full h-1/2 transition-height ease-in duration-300 ${about ? "h-3/4": "h-1/2"}`}>
-        <button className="bg-gradient-to-r from-color2 to-color3 h-full w-1/2 rounded-bd1 mx-2"
+    
+    <div className={`flex w-full transition-height ease-in duration-300 ${about || contact ? "h-3/4": "h-1/2"} `}>
+        <div className={`flex h-full transition-width ease-in duration-300 ${about ? "w-3/4": "w-1/2"}`}>
+        <button className="bg-gradient-to-r from-color2 to-color3 h-full w-full rounded-bd1 mx-2"
         onMouseEnter={() => setAbout(true)}
         onMouseLeave={() => setAbout(false)}>
             <p className="text-3xl font-semibold text-beige">About</p>
         </button>
-        <button className="bg-gradient-to-r from-color3 to-color4 h-full w-1/2 top-0 rounded-bd1 mr-2">
+    </div>
+    <div className={`flex w-1/2 h-full transition-width ease-in duration-300 ${contact ? "w-3/4": "w-1/2"}`}>
+        <button className="bg-gradient-to-r from-color3 to-color4 h-full w-full top-0 rounded-bd1 mr-2"
+                onMouseEnter={() => setContact(true)}
+                onMouseLeave={() => setContact(false)}>
             <p className="text-3xl font-semibold text-peach">Contact</p>
         </button>
+    </div>
     </div>
     <div className={`flex w-full mt-2 transition-height ease-in duration-300 ${certificate ? "h-3/4": "h-1/2"}`}> 
         <button className="bg-gradient-to-r from-color2 to-color4 h-full w-full rounded-bd1 mx-2 " 
