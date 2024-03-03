@@ -8,8 +8,16 @@ const config: Config = {
   ],
   theme: {borderRadius: {
     'bd1': '50px',
+    'bd2': '100px'
   },
     extend: {
+      scale: {
+        '300': '3',
+      },
+      spacing: {
+        'ht1':"150px",
+        'ht2':"120px",
+      },
       colors: {
         'color1' : '#EFB5B5',
         'color2': '#BFA7C5',
@@ -20,6 +28,9 @@ const config: Config = {
         'r8dark':'#C01064',
         'peach':'#FDD1D1',
         'beige':"#F1DED1",
+        'pgPeach':'#CF8B8C',
+        'pgLight':'#F7E5F0',
+        'pgText':'#5D0654'
       },
       
       backgroundImage: {
