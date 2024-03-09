@@ -17,6 +17,7 @@ const config: Config = {
       spacing: {
         'ht1':"150px",
         'ht2':"120px",
+        "left1":"150px",
       },
       colors: {
         'color1' : '#EFB5B5',
