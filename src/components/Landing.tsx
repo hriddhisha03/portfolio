@@ -28,6 +28,13 @@ const Landing:React.FC<LandingProps> = () => {
         setTimeout(() => {
             router.push('/project')// Your code to execute after the delay goes here
         }, 1000);
+    
+    }
+    const handleAbout = () => {
+        
+        setTimeout(() => {
+            router.push('/about')// Your code to execute after the delay goes here
+        }, 1000);
     }
     return (
         <> 
@@ -50,7 +57,7 @@ const Landing:React.FC<LandingProps> = () => {
     
     <div className={`flex w-full transition-height ease-in duration-300 ${about || contact ? "h-3/4": "h-1/2"} `}>
         <div className={`flex h-full transition-width ease-in duration-300 ${about ? "w-3/4": "w-1/2"}`}>
-        <button className="bg-gradient-to-r from-color2 to-color3 h-full w-full rounded-bd1 mx-2"
+        <button onClick={handleAbout} className="bg-gradient-to-r from-color2 to-color3 h-full w-full rounded-bd1 mx-2"
         onMouseEnter={() => setAbout(true)}
         onMouseLeave={() => setAbout(false)}>
             <p className="text-3xl font-semibold text-beige">About</p>
