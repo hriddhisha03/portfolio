@@ -6,7 +6,7 @@ type projectProps = {
     
 };
 
-const project:React.FC<projectProps> = () => {
+const Project:React.FC<projectProps> = () => {
     const [project, setProject] = useState(false);
     // setTimeout(() => {
     //     setProject(false);
@@ -98,7 +98,7 @@ const project:React.FC<projectProps> = () => {
     
 );
 }
-export default project;
+export default Project;
 /*<div className='flex w-screen items-center h-2/5 '>
     
         <button className='ml-3 mr-2'><Image className='rotate-180' src="/arrow.png" alt="arrow" width={30} height={30} /></button>
