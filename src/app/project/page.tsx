@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 type projectProps = {
     
+    
 };
 
 const Project:React.FC<projectProps> = () => {

@@ -36,6 +36,13 @@ const Landing:React.FC<LandingProps> = () => {
             router.push('/about')// Your code to execute after the delay goes here
         }, 1000);
     }
+
+    const handleCertificates = () => {
+        
+        setTimeout(() => {
+            router.push('/Certificates')// Your code to execute after the delay goes here
+        }, 1000);
+    }
     return (
         <> 
          <div className="bg-black my-20 mx-16 font-sans text-white border-b-4 border-white pb-5 px-5">
@@ -72,7 +79,7 @@ const Landing:React.FC<LandingProps> = () => {
     </div>
     </div>
     <div className={`flex w-full mt-2 transition-height ease-in duration-300 ${certificate ? "h-3/4": "h-1/2"}`}> 
-        <button className="bg-gradient-to-r from-color2 to-color4 h-full w-full rounded-bd1 mx-2 " 
+        <button onClick={handleCertificates} className="bg-gradient-to-r from-color2 to-color4 h-full w-full rounded-bd1 mx-2 " 
         onMouseEnter={() => setCerti(true)}
         onMouseLeave={() => setCerti(false)}>
             <p className='text-3xl font-semibold bg-gradient-to-r from-beige to-peach bg-clip-text text-transparent'>Certificates</p> </button>
