@@ -3,11 +3,11 @@ import React from 'react';
 
 
 import Landing from '../components/Landing';
-type pageProps = {
+type PageProps = {
   
 };
 
-const page:React.FC<pageProps> = () => {
+const Page:React.FC<PageProps> = () => {
   
   return (
     <>
@@ -18,5 +18,5 @@ const page:React.FC<pageProps> = () => {
   );
 }
 
-export default page;
+export default Page;
   

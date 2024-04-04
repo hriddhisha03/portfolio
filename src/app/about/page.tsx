@@ -2,11 +2,11 @@
 import React from 'react';
 import Image from 'next/image';
 import {useState } from 'react';
-type pageProps = {
+type AboutProps = {
     
 };
 
-const page:React.FC<pageProps> = () => {
+const About:React.FC<AboutProps> = () => {
     
     const [resume, setResume] = useState(false);
     const [cv, setCv] = useState(false);
@@ -36,4 +36,4 @@ const page:React.FC<pageProps> = () => {
     </div>
     </>
 }
-export default page;
+export default About;
