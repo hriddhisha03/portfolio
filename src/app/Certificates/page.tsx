@@ -52,6 +52,14 @@ const certificates: {[key:number]: {[key:string]:string} }= {
     }
 }
 
+        const handleUp = () => {
+            setCertificate("absolute ml-24 top-[53px] transition-all duration-500 ease-in -translate-y-32 opacity-0 ")
+            setTimeout(() => {
+                setCertificateCount(certificate_count == 0 ? 6: Math.abs((certificate_count - 1)%7));
+                setCertificate("absolute ml-24 top-[53px] transition-opacity duration-500 ease-in translate-y-0 ")
+            }, 1000);
+        }
+
         const handleDown = () => {
             
             setCertificate("absolute ml-24 top-[53px] transition-all duration-500 ease-in translate-y-32 opacity-0 ")
@@ -79,7 +87,7 @@ const certificates: {[key:number]: {[key:string]:string} }= {
             {/*right division */}
             <div className='relative h-3/4 w-1/2'>
                 
-                <button className=" rotate-180 z-50 absolute top-0 ml-96" ><Image src="/arrow2.png" alt="arrow" width={30} height={30} /></button>
+                <button onClick={handleUp} className=" rotate-180 z-50 absolute top-0 ml-96" ><Image src="/arrow2.png" alt="arrow" width={30} height={30} /></button>
                 <Image className={`${certificate}`} src={certificates[certificate_count]["image"]} alt="arrow" width={600} height={400} />
                 <button onClick={handleDown} className="z-50 absolute bottom-0 ml-96" ><Image src="/arrow2.png" alt="arrow" width={30} height={30}/></button>
             </div> 
