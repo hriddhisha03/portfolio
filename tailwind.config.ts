@@ -8,7 +8,8 @@ const config: Config = {
   ],
   theme: {borderRadius: {
     'bd1': '50px',
-    'bd2': '100px'
+    'bd2': '100px',
+    'full': '9999px',
   },
     extend: {
       scale: {
@@ -31,7 +32,8 @@ const config: Config = {
         'beige':"#F1DED1",
         'pgPeach':'#CF8B8C',
         'pgLight':'#F7E5F0',
-        'pgText':'#5D0654'
+        'pgText':'#5D0654',
+        'github':'#24292E',
       },
       
       backgroundImage: {

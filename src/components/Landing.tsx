@@ -37,6 +37,13 @@ const Landing:React.FC<LandingProps> = () => {
         }, 1000);
     }
 
+    const handleContact = () => {
+        
+        setTimeout(() => {
+            router.push('/Contact')// Your code to execute after the delay goes here
+        }, 1000);
+    }
+
     const handleCertificates = () => {
         
         setTimeout(() => {
@@ -71,7 +78,7 @@ const Landing:React.FC<LandingProps> = () => {
         </button>
     </div>
     <div className={`flex w-1/2 h-full transition-width ease-in duration-300 ${contact ? "w-3/4": "w-1/2"}`}>
-        <button className="bg-gradient-to-r from-color3 to-color4 h-full w-full top-0 rounded-bd1 mr-2"
+        <button  onClick={handleContact} className="bg-gradient-to-r from-color3 to-color4 h-full w-full top-0 rounded-bd1 mr-2"
                 onMouseEnter={() => setContact(true)}
                 onMouseLeave={() => setContact(false)}>
             <p className="text-3xl font-semibold text-peach">Contact</p>
