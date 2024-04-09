@@ -19,6 +19,11 @@ const config: Config = {
         'ht1':"150px",
         'ht2':"120px",
         "left1":"150px",
+        'button2':'36rem',
+        'button3':'26.5rem',
+        'buttonright':'21rem',
+        'buttonright1':'26rem',
+
       },
       colors: {
         'color1' : '#EFB5B5',

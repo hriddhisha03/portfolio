@@ -8,10 +8,10 @@ type projectProps = {
 };
 
 const Project:React.FC<projectProps> = () => {
-    const [project, setProject] = useState(true);
-    setTimeout(() => {
-        setProject(false);
-    }, 700);
+    const [project, setProject] = useState(false);
+    // setTimeout(() => {
+    //     setProject(false);
+    // }, 2000);
     const [button1, setButton1] = useState('h-ht2 w-60');
     const [button2, setButton2] = useState('h-ht1 w-80 ');
     const [button3, setButton3] = useState('h-ht2 w-60 ');
@@ -26,14 +26,17 @@ const Project:React.FC<projectProps> = () => {
         setTimeout(() => {
             setButton1('h-ht2 w-60')// Your code to execute after the delay goes here
         }, 1000);
+
         setButton2('transition-all duration-700 ease-in h-ht2 w-60 -translate-x-button2 translate-y-4  ');
         setTimeout(() => {
             setButton2('h-ht1 w-80')// Your code to execute after the delay goes here
         }, 1000);
+
         setButton3('transition-all duration-700 ease-in h-ht1 w-80 -translate-x-button3 -translate-y-4 ');
         setTimeout(() => {
             setButton3('h-ht2 w-60')//default value of button3 Your code to execute after the delay goes here
         }, 1000);
+        
         setButton4('transition-all duration-700 ease-in h-ht2 w-60  translate-y-4 opacity-100');
         setTimeout(() => {
             setButton4('h-20 w-40 translate-x-44 mt-8 opacity-0')//default value of button3 Your code to execute after the delay goes here
@@ -66,7 +69,7 @@ const Project:React.FC<projectProps> = () => {
     <>
     
     
-    {project?(<><div className={`w-screen h-screen`}>
+    {project?(<><div className={`w-screen h-screen  `}>
     <button className="bg-gradient-to-r from-color1 to-color2 h-full w-full hover:text-black "> 
         <p className="font-sans text-8xl bg-gradient-to-r from-maroon to-r8dark bg-clip-text text-transparent pb-4
          font-bold">Projects</p>
@@ -100,12 +103,3 @@ const Project:React.FC<projectProps> = () => {
 );
 }
 export default Project;
-/*<div className='flex w-screen items-center h-2/5 '>
-    
-        <button className='ml-3 mr-2'><Image className='rotate-180' src="/arrow.png" alt="arrow" width={30} height={30} /></button>
-        <button onClick={handleProjectLeft} className={`${button1} text-pgText font-sans text-4xl ml-12 font-semibold bg-gradient-to-r from-pgPeach to-pgLight rounded-bd2`}>Project 1</button>
-        <button className='h-ht1 w-80 text-pgText font-sans text-6xl ml-80 font-semibold bg-gradient-to-r from-pgPeach via-pgLight to-pgPeach rounded-bd2'>Project 2</button>
-        <button className='h-ht2 w-60 text-pgText font-sans text-4xl ml-80 font-semibold bg-gradient-to-r from-pgLight to-pgPeach rounded-bd2'>Project 3</button> 
-        <button className='pl-10 mr-3'><Image src="/arrow.png" alt="arrow" width={30} height={30} /></button>
-        {` ${button4} absolute right-0 translate-x-20`}
-    </div>*/
