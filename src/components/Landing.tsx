@@ -7,6 +7,8 @@ type LandingProps = {
   
 };
 
+
+
 const Landing:React.FC<LandingProps> = () => {
     const router = useRouter();
     
@@ -58,7 +60,7 @@ const Landing:React.FC<LandingProps> = () => {
          </div>
          <div className="w-10/12 mx-20 h-80 flex"> 
 {/*project button*/}
-<div className={`flex h-full transition-width ease-in duration-300 ${project ['hover']? "w-3/4": "w-1/2"} ${project['click']?"scale-300 translate-x-96 -translate-y-24": null}`}>
+<div className={`flex h-full transition-width ease-in duration-300 ${project ['hover']? "w-3/4": "w-1/2"}`}>
     <button onClick={handleProject} className="bg-gradient-to-r  from-color1 to-color2 h-full rounded-bd1 w-full hover:text-black "
       onMouseEnter={() => setproject({'hover':true, 'click':false})}
       onMouseLeave={() => setproject({'hover':false, 'click':false})}> 
